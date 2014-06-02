@@ -22,7 +22,7 @@ Usage
 			NSError* error = nil;
 			
 			NSData* decryptedData = [CSSMPubKeyDecrypt decryptData:encryptedData usingPublicKey:key error:&error];
-			if (decryptedData)
+			if (!decryptedData)
 			{
 				NSLog(@"error decrypting data: %@", error);
 			}
